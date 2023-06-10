@@ -1,3 +1,12 @@
+<?php
+include "/controller/customer_controller.php";
+?>
+
+<?php
+$customer = new Customer;
+$list_customer = $customer->show_customers();
+?>
+
 <h2>Tất cả khách hàng</h2>
 <table class="table ">
     <thead>
@@ -13,31 +22,25 @@
         </tr>
     </thead>
     <?php
-    include_once "../config/dbconnect.php";
-    $sql = "SELECT * from users where isAdmin=0";
-    $result = $conn->query($sql);
-    $count = 1;
-    if ($result->num_rows > 0) {
-        while ($row = $result->fetch_assoc()) {
-
+    
+    if ($list_customer->num_rows > 0) {
+        while ($row = $list_customer->fetch_assoc()) {
             ?>
             <tr>
                 <td>
-                    <?= $row["first_name"] ?>
+                    <?= $row["id"] ?>
+                </td>
+                <td>
+                    <?= $row["name"] ?>
                 </td>
                 <td>
                     <?= $row["email"] ?>
                 </td>
                 <td>
-                    <?= $row["contact_no"] ?>
-                </td>
-                <td>
-                    <?= $row["registered_at"] ?>
+                    <?= $row["phone"] ?>
                 </td>
             </tr>
             <?php
-            $count = $count + 1;
-
         }
     }
     ?>
