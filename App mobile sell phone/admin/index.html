@@ -10,11 +10,11 @@
       integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM"
       crossorigin="anonymous"
     />
-    <link rel="stylesheet" href="../assets/css/admin/style.css" />
     <link
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css"
     />
+    <link rel="stylesheet" href="../assets/css/admin/style.css" />
   </head>
   <body>
     <div class="admin-content">
@@ -31,21 +31,39 @@
         <hr />
         <ul class="nav nav-pills flex-column mb-auto">
           <li class="nav-item">
-            <a href="#home" class="nav-link text-white active" aria-current="page">
+            <a
+              href="#home"
+              class="nav-link text-white active"
+              aria-current="page"
+            >
               <i class="bi bi-house"> </i>
               Trang chủ
             </a>
           </li>
           <li>
-            <a href="#customers" class="nav-link text-white">
+            <a
+              href="#customers"
+              onclick="showCustomers()"
+              class="nav-link text-white"
+            >
               <i class="bi bi-person-lines-fill"> </i>
               Khách hàng
             </a>
           </li>
           <li>
-            <a href="#typephone" class="nav-link text-white">
+            <a href="#category" 
+            onclick="showCategory()"
+            class="nav-link text-white">
               <i class="bi bi-tablet-landscape"></i>
-              Loại điện thoại
+              Loại sản phẩm
+            </a>
+          </li>
+          <li>
+            <a href="#brands" 
+            onclick="showBrand()"
+            class="nav-link text-white">
+              <i class="bi bi-bootstrap"></i>
+              Thương hiệu
             </a>
           </li>
           <li>
@@ -94,8 +112,7 @@
         </div>
       </div>
       <!-- Right -->
-      <div id="main-content" class="allContent-section"
-      >Main context</div>
+      <div id="main-content" class="allContent-section" style="width: 100vh;">Main context</div>
     </div>
 
     <!---->
@@ -104,8 +121,11 @@
       integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
       crossorigin="anonymous"
     ></script>
-    <script src="https://code.jquery.com/jquery-3.7.0.js" integrity="sha256-JlqSTELeR4TLqP0OG9dxM7yDPqX1ox/HfgiSLBj8+kM=" crossorigin="anonymous"></script>
+    <script
+      src="https://code.jquery.com/jquery-3.7.0.js"
+      integrity="sha256-JlqSTELeR4TLqP0OG9dxM7yDPqX1ox/HfgiSLBj8+kM="
+      crossorigin="anonymous"
+    ></script>
     <script src="../assets/js/admin/script.js"></script>
-
   </body>
 </html>

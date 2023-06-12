@@ -1,8 +1,6 @@
 <?php
- define('__ROOT__', dirname(dirname(__FILE__))); 
- include (__ROOT__.'/config/config.php');
+include "config.php"
 ?>
-
 
 <?php
 Class Database{
@@ -18,9 +16,7 @@ Class Database{
  }
  
 private function connectDB(){
-
-
-   $this->link = new mysqli($this->host, $this->user, $this->pass, $this->dbname);
+   $this->link = mysqli_connect($this->host, $this->user, $this->pass, $this->dbname);
     
    if(!$this->link){
      $this->error ="Connection fail".$this->link->connect_error;
