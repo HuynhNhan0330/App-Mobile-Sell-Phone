@@ -69,4 +69,15 @@ public function insert($query){
      return false;
     }
    }
+
+// Find data
+public function find($query){
+  $find_row = $this->link->query($query) or 
+    die($this->link->error.__LINE__);
+  if($find_row){
+    return $find_row;
+  } else {
+    return false;
+   }
+  }
 }

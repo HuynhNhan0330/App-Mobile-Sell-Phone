@@ -1,75 +1,91 @@
 <?php
 include_once "../../class/customer.php";
-include_once "../../helper/format.php";
 ?>
 
 <?php
 $customer = new Customer;
-$list_customer = $customer->showCustomers();
 
-$format = new Format;
+$id=$_POST['record'];
+$customer = new Customer;
+$current_customer = $customer->findCustomer($id);
+$row = $current_customer->fetch_assoc();
+
 ?>
-
-<div>
-<h2 class="text-center">Tất cả khách hàng</h2>
-
-<button type="button" class="btn btn-success" onclick="showAddCustomer()" style="height:40px; margin-bottom: 10px">
-Thêm khách hàng
-</button>
-                    <table class="table">
-                <thead class="thead-dark">
-                    <tr>
-                        <th scope="col" class="text-center">Mã</th>
-                        <th scope="col" class="text-center">Tên </th>
-                        <th scope="col" class="text-center">Email</th>
-                        <th scope="col" class="text-center">Số điện thoại</th>
-                        <th scope="col" class="text-center">Địa chỉ</th>
-                        <th scope="col" class="text-center">Tài khoản</th>
-                        <th scope="col" class="text-center">Mật khẩu</th>
-                        <th scope="col" class="text-center">Ngày đăng kí</th>
-                        <th scope="col" class="text-center" colspan="3">Thao tác</th>
-                    </tr>
-                </thead>
-                <?php
-                
-                if ($list_customer->num_rows > 0) {
-                    while ($row = $list_customer->fetch_assoc()) {
-                        ?>
-                        <tr>
-                            <td scope="col">
-                                <?= $row["id"] ?>
-                            </td>
-                            <td>
-                                <?= $format->textShorten($row["name"], 20)?>
-                            </td>
-                            <td>
-                                <?= $format->textShorten($row["email"], 20)?>
-                            </td>
-                            <td>
-                                <?= $format->textShorten($row["phone"], 12)?>
-                            </td>
-                            <td>
-                                <?= $format->textShorten($row["address"], 20)?>
-                            </td>
-                            <td>
-                                <?= $format->textShorten($row["username"], 10)?>
-                            </td>
-                            <td>
-                                <?= $format->textShorten($row["password"], 10)?>
-                            </td>
-                            <td>
-                                <?php
-                                $formattedDate = date("d-m-Y", strtotime($row["date_registered"]));
-                                echo $formattedDate;
-                                ?>
-                            </td>
-                            <td><button class="btn btn-success" style="height:40px" onclick="variationEditForm('<?=$row['id']?>')">Xem</button></td>
-                            <td><button class="btn btn-primary" style="height:40px" onclick="variationEditForm('<?=$row['id']?>')">Sửa</button></td>
-                            <td><button class="btn btn-danger" style="height:40px"  onclick="customerDelete('<?=$row['id']?>')">Xoá</button></td>
-                        </tr>
-                        <?php
-                    }
-                }
-                ?>
-            </table>
-            </div>
+<div class="container mt-3">
+    <h2 class="text-center">Thông tin chi tiết của khách hàng</h2>
+    <div class="mb-4 w-50 m-auto">
+        <label>
+            Mã khách hàng
+        </label>
+        <div class="form-control-static">
+            <?=$row['id']?>
+        </div>
+    </div>
+    <div class="mb-4 w-50 m-auto">
+        <label>
+            Tên khách hàng
+        </label>
+        <div class="form-control-static">
+            <?=$row['name']?>
+        </div>
+    </div>
+    <div class="mb-4 w-50 m-auto">
+        <label>
+            Email
+        </label>
+        <div class="form-control-static">
+            <?=$row['email']?>
+        </div>
+    </div>
+    <div class="mb-4 w-50 m-auto">
+        <label>
+            Địa chỉ
+        </label>
+        <div class="form-control-static">
+            <?=$row['address']?>
+        </div>
+    </div>
+    <div class="mb-4 w-50 m-auto">
+        <label>
+            Số điện thoại
+        </label>
+        <div class="form-control-static">
+            <?=$row['phone']?>
+        </div>
+    </div>
+    <div class="mb-4 w-50 m-auto">
+        <label>
+            CMND/CCCD
+        </label>
+        <div class="form-control-static">
+            <?=$row['identification']?>
+        </div>
+    </div>
+    <div class="mb-4 w-50 m-auto">
+        <label for="username">
+            Tài khoản
+        </label>
+        <div class="form-control-static">
+            <?=$row['username']?>
+        </div>
+    </div>
+    <div class="mb-4 w-50 m-auto">
+        <label>
+            Mật khẩu
+        </label>
+        <div class="form-control-static">
+            <?=$row['password']?>
+        </div>
+    </div>
+    <div class="mb-4 w-50 m-auto">
+        <label>
+            Ngày đăng kí
+        </label>
+        <div class="form-control-static">
+            <?=$row['date_registered']?>
+        </div>
+    </div>
+    <div class="w-50 m-auto">
+        <button class="btn btn-secondary" style="height:40px" onclick="showCustomers()">Quay lại</button>
+    </div>
+</div>

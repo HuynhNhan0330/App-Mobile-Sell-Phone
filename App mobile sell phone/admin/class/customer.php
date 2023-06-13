@@ -24,6 +24,13 @@ class customer {
     public function insertCustomer() {
         
     }
+
+    public function findCustomer($id) {
+        $query = "SELECT * FROM users WHERE id = '$id'";
+        $result = $this->ins->find($query);
+        return $result;
+    }
+
 }
 
 ?>

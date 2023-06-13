@@ -17,49 +17,50 @@ if (isset($_POST['insert_customer'])) {
             <label for="customer_name">
                 Tên khách hàng
             </label>
-            <input type="text" name="customer_name" id="customer_name"
-                    class="form-control"
-                    placeholder="Nhập tên khách hàng" autocomplete="off" required="required">
+            <input type="text" name="customer_name" id="customer_name" class="form-control"
+                placeholder="Nhập tên khách hàng" autocomplete="off" required="required">
         </div>
         <div class="mb-4 w-50 m-auto">
             <label for="email">
                 Email
             </label>
-            <input type="text" name="email" id="email"
-                    class="form-control"
-                    placeholder="Nhập email" autocomplete="off" required="required">
+            <input type="text" name="email" id="email" class="form-control" placeholder="Nhập email" autocomplete="off"
+                required="required">
         </div>
         <div class="mb-4 w-50 m-auto">
             <label for="address">
                 Địa chỉ
             </label>
-            <input type="text" name="address" id="address"
-                    class="form-control"
-                    placeholder="Nhập địa chỉ" autocomplete="off" required="required">
+            <input type="text" name="address" id="address" class="form-control" placeholder="Nhập địa chỉ"
+                autocomplete="off" required="required">
         </div>
         <div class="mb-4 w-50 m-auto">
             <label for="phone">
                 Số điện thoại
             </label>
-            <input type="text" name="phone" id="phone"
-                    class="form-control"
-                    placeholder="Nhập số điện thoại" autocomplete="off" required="required">
+            <input type="text" name="phone" id="phone" class="form-control" placeholder="Nhập số điện thoại"
+                autocomplete="off" required="required">
+        </div>
+        <div class="mb-4 w-50 m-auto">
+            <label for="identification">
+                CMND/CCCD
+            </label>
+            <input type="text" name="identification" id="identification" class="form-control"
+                placeholder="Nhập CMND/CCCD" autoco mplete="off" required="required">
         </div>
         <div class="mb-4 w-50 m-auto">
             <label for="username">
                 Tài khoản
             </label>
-            <input type="text" name="username" id="username"
-                    class="form-control"
-                    placeholder="Nhập tài khoản" autocomplete="off" required="required">
+            <input type="text" name="username" id="username" class="form-control" placeholder="Nhập tài khoản"
+                autocomplete="off" required="required">
         </div>
         <div class="mb-4 w-50 m-auto">
             <label for="password">
                 Mật khẩu
             </label>
-            <input type="text" name="password" id="password"
-                    class="form-control"
-                    placeholder="Nhập mật khẩu" autocomplete="off" required="required">
+            <input type="text" name="password" id="password" class="form-control" placeholder="Nhập mật khẩu"
+                autocomplete="off" required="required">
         </div>
 
         <div class="w-50 m-auto">

@@ -20,7 +20,7 @@ Thêm thương hiệu
                     <tr>
                         <th scope="col" class="text-center">Mã</th>
                         <th scope="col" class="text-center">Tên</th>
-                        <th scope="col" class="text-center" colspan="1">Thao tác</th>
+                        <th scope="col" class="text-center" colspan="3">Thao tác</th>
                     </tr>
                 </thead>
                 <?php
@@ -33,7 +33,7 @@ Thêm thương hiệu
                                 <?= $row["brand_id"] ?>
                             </td>
                             <td>
-                                <?= $format->textShorten($row["brand_name"], 100)?>
+                                <?= $format->textShorten($row["brand_name"], 30)?>
                             </td>
                             <td><button class="btn btn-success" style="height:40px" onclick="variationEditForm('<?=$row['brand_id']?>')">Xem</button></td>
                             <td><button class="btn btn-primary" style="height:40px" onclick="variationEditForm('<?=$row['brand_id']?>')">Sửa</button></td>

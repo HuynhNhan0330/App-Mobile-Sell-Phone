@@ -3,10 +3,15 @@ $(document).on('click', '.admin-content #sidebar ul li a', function() {
     $(this).addClass('active')
 })
 
+$('form').submit(function(event) {
+    event.preventDefault();
+    console.log("Run");
+});
+
 // Customer
 function showCustomers(){
     $.ajax({
-        url:"../admin/controller/customer/viewCustomer.php",
+        url:"../admin/controller/customer/viewAllCustomer.php",
         method:"post",
         data:{record:1},
         success:function(data){
@@ -34,12 +39,22 @@ function customerDelete(id){
             method:"post",
             data:{record:id},
             success:function(data){
-                alert(data);
-                // $('form').trigger('reset');
+                $('form').trigger('reset');
                 showCustomers();
             }
         });
     }
+}
+
+function customerView(id){
+    $.ajax({
+        url:"../admin/controller/customer/viewCustomer.php",
+        method:"post",
+        data:{record:id},
+        success:function(data){
+            $('.allContent-section').html(data);
+        }
+    });
 }
 
 // Category
@@ -69,7 +84,3 @@ function showBrand(){
 
 
 
-$('form').submit(function(event) {
-    console.log("Run");
-    event.preventDefault();
-});
