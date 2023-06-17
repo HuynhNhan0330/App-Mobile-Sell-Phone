@@ -72,7 +72,3 @@ tr {
   background-color: #fafafa;
   font-family: 'Montserrat', sans-serif;
 }
-
-tr:nth-child(even) {
-  background-color: #eeeeee;
-}
