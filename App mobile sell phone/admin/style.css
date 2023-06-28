@@ -1,0 +1,92 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+    font-size: 18px;
+}
+
+/* Sidebar */
+.admin-content {
+    display: flex;
+}
+
+.admin-content #sidebar {
+    width: 280px;
+    height: 100vh;
+}
+
+.admin-content #sidebar .side-header img {
+    margin-left: 60px;
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+}
+
+.admin-content #sidebar .side-header h5 {
+    margin-top: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+a i {
+    width: 16;
+    height: 16;
+    padding-right: 10px;
+}
+
+.admin-content #sidebar ul li a:hover,
+.admin-content #sidebar ul li a:focus {
+    background-color: rgba(13, 110, 253, 255);
+}
+
+#btnSignout {
+    height: 40px;
+    border-radius: 10px;
+    padding-top: 6px;
+    text-align: center;
+}
+
+#btnSignout:hover {
+    background-color: #0d6efd;
+}
+
+/* Main content */
+.allContent-section {
+    width: calc(100% - 280px);
+}
+
+/* Table */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    border-spacing: 0;
+    box-shadow: 0 2px 15px rgba(64, 64, 64, .7);
+    border-radius: 12px 12px 0 0;
+}
+
+td,
+th {
+    padding: 10px 16px;
+    text-align: center;
+    vertical-align: top;
+    max-width: 100px; /* Đặt độ rộng tối đa của ô */
+    white-space: nowrap; /* Ngăn không cho nội dung xuống dòng */
+    overflow: hidden; /* Ẩn phần nội dung vượt quá độ rộng */
+    text-overflow: ellipsis; /* Hiển thị dấu chấm (...) khi nội dung bị cắt ngắn */
+}
+
+th {
+    background-color: #63abed;
+    color: #fafafa;
+    font-family: 'Open Sans', Sans-serif;
+    font-weight: bold;
+}
+
+tr {
+    width: 100%;
+    background-color: #fafafa;
+    font-family: 'Montserrat', sans-serif;
+}
+

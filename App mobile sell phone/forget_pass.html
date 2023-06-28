@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>login</title>
+
+    <!-- font awesome cdn link  -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- custom css file link  -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11.0.18/dist/sweetalert2.min.css" />
+    <link rel="stylesheet" href="owlcarousel/assets/owl.carousel.min.css">
+    <link rel="stylesheet" href="owlcarousel/assets/owl.theme.default.min.css">
+    <link rel="stylesheet" href="css/jssor.css">
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/product-detail.css">
+    <link rel="stylesheet" href="css/forget_pass.css">
+    <link rel="stylesheet" href="css/responsive.css">
+
+    <!-- custom js file link  -->
+    <script src="https://code.jquery.com/jquery-3.7.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/nodemailer@6.9.3/lib/nodemailer.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="owlcarousel/owl.carousel.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.0.18/dist/sweetalert2.min.js"></script>
+    <script type="module" src="js/script.js" defer></script>
+</head>
+
+<body>
+
+    <!-- header section starts  -->
+
+    <header class="header-page">
+
+        <a href="home.html" class="header-logo">
+            <img class="logo logo-mobile" src="images/logo.png" alt="">
+        </a>
+
+        <nav class="navbar">
+            <ul>
+                <li><a class="nav-link" href="home.html">Trang chủ</a></li>
+                <li><a class="nav-link" href="products.html">Sản phẩm</a></li>
+                <li><a class="nav-link" href="#">Thông tin</a>
+                    <ul class="pr-20">
+                        <li><a class="nav-link border-bottom" href="about.html">Về chúng tôi</a></li>
+                        <li><a class="nav-link" href="blogs.html">Blogs</a></li>
+                    </ul>
+                </li>
+                <li><a class="nav-link" href="contact.html">Liên hệ</a></li>
+                <li><a class="nav-link active" href="#">Tài khoản</a>
+                    <ul class="pr-20">
+                        <li><a class="nav-link border-bottom" href="login.html">Đăng nhập</a></li>
+                        <li><a class="nav-link" href="register.html">Đăng ký</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+
+        <div class="icons">
+            <div id="menu-btn" class="fas fa-bars"></div>
+            <a href="cart.html" class="fas fa-shopping-cart"></a>
+        </div>
+
+    </header>
+
+    <!-- header section ends -->
+
+    <!-- header section  -->
+
+    <section class="heading">
+        <h1>Quên mật khẩu</h1>
+        <p> <a href="home.html">Trang chủ</a> >> Quên mật khẩu </p>
+    </section>
+
+    <!-- header section -->
+
+    <!-- login form section starts -->
+
+    <section class="login-form">
+
+        <form action="">
+            <h3>Nhập thông tin</h3>
+            <div class="inputBox">
+                <span><i class="fa-solid fa-envelope"></i></span>
+                <input type="text" name="userLogin" placeholder="Nhập email" id="email_forgetpass" required="True">
+            </div>
+            <div>
+                <button>Gửi</button>
+            </div>
+        </form>
+
+        <form action="">
+            <h3>Đặt lại mật khẩu</h3>
+            <div class="inputBox">
+                <span><i class="fa-solid fa-key"></i></span>
+                <input type="text" name="textVerification" placeholder="Nhập mã xác nhận" id="" required="True">
+            </div>
+            <div class="inputBox">
+                <span><i class="fa-solid fa-lock"></i></span>
+                <input type="text" name="newPassword" placeholder="Nhập mật khẩu mới" id="" required="True">
+            </div>
+            <div class="inputBox">
+                <span><i class="fa-solid fa-lock"></i></span>
+                <input type="text" name="reNewPassword" placeholder="Nhập lại mật khẩu mới" id="" required="True">
+            </div>
+            <div>
+                <button>Gửi</button>
+            </div>
+        </form>
+        <!-- <form action="">
+            <h3>Nhập mật khẩu mới</h3>
+            <div class="inputBox">
+                <span><i class="fa-solid fa-lock"></i></span>
+                <input type="text" name="newPassword" placeholder="Nhập mật khẩu mới" id="" required="True">
+            </div>
+            <div class="inputBox">
+                <span><i class="fa-solid fa-lock"></i></span>
+                <input type="text" name="reNewPassword" placeholder="Nhập lại mật khẩu mới" id="" required="True">
+            </div>
+            <div>
+                <button>Gửi</button>
+            </div>
+        </form> -->
+
+    </section>
+
+    <!-- login form section ends -->
+
+    <!-- footer  -->
+    <footer>
+        <div class="container footer-bg">
+            <div class="col-content">
+                <div class="link-content">
+                    <h4><a>Hỗ trợ - Dịch vụ</a></h4>
+                    <ul>
+                        <li><a href="#">Mua hàng trả góp</a></li>
+                        <li><a href="#">Hướng dẫn đặt hàng và thanh toán</a></li>
+                        <li><a href="#">Tra cứu đơn hàng</a></li>
+                        <li><a href="#">Chính sách bảo hành</a></li>
+                        <li><a href="#">Chính sách bảo mật</a></li>
+                        <li><a href="#">Chính sách giải quyết khiếu nại</a></li>
+                        <li><a href="#">Điều khoản mua bán hàng hóa</a></li>
+                        <li><a href="#">Câu hỏi thường gặp</a></li>
+                        <li><a href="#">Phạm vi, điều khoản gói bảo hành mở rộng</a></li>
+                    </ul>
+                </div>
+                <div class="link-content">
+                    <h4><a>Thông tin liên hệ</a></h4>
+                    <ul>
+                        <li><a href="#">Bán hàng online</a></li>
+                        <li><a href="#">Chăm sóc khách hàng</a></li>
+                        <li><a href="#">Hỗ trợ kỹ thuật</a></li>
+                        <li><a href="#">Hỗ trợ bảo hành và sửa chữa</a></li>
+                        <li><a href="#">Liên hệ khối văn phòng</a></li>
+                        <li><a href="#">Hợp tác kinh doanh</a></li>
+                        <li><a href="#">Trung tâm bảo hành</a></li>
+                    </ul>
+                </div>
+                <div class="link-content">
+                    <h4><a>Hệ thống cửa hàng</a></h4>
+                    <ul>
+                        <li><a href="#">Hệ thống cửa hàng</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4>Tổng đài</h4>
+                    <a class="hotline" href="tel:0906536418">090 6536418</a>
+                </div>
+                <div>
+                    <h4>Thanh toán miễn phí</h4>
+                    <ul class="list-logo">
+                        <li class="d-flex">
+                            <img src="images/logo-visa.png" alt="">
+                            <img src="images/logo-master.png" alt="">
+                        </li>
+                        <li class="d-flex">
+                            <img src="images/logo-jcb.png" alt="">
+                            <img src="images/logo-samsungpay.png" alt="">
+                        </li>
+                        <li class="d-flex">
+                            <img src="images/logo-atm.png" alt="">
+                            <img src="images/logo-vnpay.png" alt="">
+                        </li>
+                    </ul>
+                </div>
+                <div>
+                    <h4>Hình thức vận chuyển</h4>
+                    <ul class="list-logo">
+                        <li class="d-flex">
+                            <img src="images/nhattin.jpg" alt="">
+                            <img src="images/vnpost.jpg" alt="">
+                        </li>
+                    </ul>
+                    <div class="mg-top20">
+                        <a href="#">
+                            <img src="images/logo-bct.png" alt="">
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-info">
+                <p>
+                    © 2020. CÔNG TY CỔ PHẦN XÂY DỰNG VÀ ĐẦU TƯ THƯƠNG MẠI UIT. MST: 0106713191. (Đăng ký lần đầu: Ngày
+                    15 tháng 12 năm 2014, Đăng ký thay đổi ngày 24/11/2022)
+                </p>
+                <p>
+                    <strong>GP số 426/GP-TTĐT do sở TTTT Hà Nội cấp ngày 22/01/2021</strong>
+                </p>
+                <p>
+                    Địa chỉ: Số 89 Đường Tam Trinh, Phường Mai Động, Quận Hoàng Mai, Thành Phố Hà Nội, Việt Nam. Điện
+                    thoại: 1900.2091. Chịu trách nhiệm nội dung:
+                    <strong>Ngô Phương Nam</strong>.
+                </p>
+            </div>
+        </div>
+        <div class="backtotop">
+            <button id="btnToTop" title="Quay lại dầu trang">
+                <i class="fa-solid fa-arrow-up"></i>
+            </button>
+        </div>
+    </footer>
+    <!-- end footer  -->
+
+
+</body>
+
+</html>

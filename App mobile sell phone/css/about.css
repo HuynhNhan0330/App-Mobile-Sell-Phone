@@ -1,0 +1,8 @@
+.title {
+    border: 1px solid black;
+    border-radius: 12px;
+}
+
+.about .content span {
+    color: var(--primary-color);
+}

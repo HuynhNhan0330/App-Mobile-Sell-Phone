@@ -1,0 +1,743 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sản phẩm</title>
+
+    <!-- font awesome cdn link  -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- custom css file link  -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="owlcarousel/assets/owl.carousel.min.css">
+    <link rel="stylesheet" href="owlcarousel/assets/owl.theme.default.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11.0.18/dist/sweetalert2.min.css" />
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.0.18/dist/sweetalert2.min.js"></script>
+    <link rel="stylesheet" href="css/jssor.css">
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/product-detail.css">
+    <link rel="stylesheet" href="css/products.css">
+    <link rel="stylesheet" href="css/responsive.css">
+
+    <!-- custom js file link  -->
+    <script src="https://code.jquery.com/jquery-3.7.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="owlcarousel/owl.carousel.min.js"></script>
+    <script type="module" src="js/script.js" defer></script>
+    <script src="js/product_script.js"></script>
+
+</head>
+
+<body>
+
+    <!-- header section starts  -->
+
+    <header class="header-page">
+
+        <a href="home.html" class="header-logo">
+            <img class="logo logo-mobile" src="images/logo.png" alt="">
+        </a>
+
+        <nav class="navbar">
+            <ul>
+                <li><a id="aHome" class="nav-link" href="home.html">Trang chủ</a></li>
+                <li><a class="nav-link" href="products.html">Sản phẩm</a></li>
+                <li><a class="nav-link" href="#">Thông tin</a>
+                    <ul class="pr-20">
+                        <li><a class="nav-link border-bottom" href="about.html">Về chúng tôi</a></li>
+                        <li><a class="nav-link" href="blogs.html">Blogs</a></li>
+                    </ul>
+                </li>
+                <li><a class="nav-link" href="contact.html">Liên hệ</a></li>
+                <li><a class="nav-link" href="#">Tài khoản</a>
+                    <ul class="pr-20" id="extensionAccount">
+                        <li id="liLogin"><a class="nav-link border-bottom" href="login.html">Đăng nhập</a></li>
+                        <li id="liRegister"><a class="nav-link" href="register.html">Đăng ký</a></li>
+                        <li id="liUser">
+                            <div class="user-content border-bottom">
+                                <a href="userpage.html">
+                                    <div class="d-flex align-items-center user-detail">
+                                        <i class="fa-solid fa-user"></i>
+                                        <span class="username" id="nameCustomer">Huỳnh Mai Cao Nhân</span>
+                                    </div>
+                                </a>
+                            </div>
+                        </li>
+                        
+                        <li id="liSignOut">
+                            <a href="#" class="f-size-2" style="padding: 2rem; text-align: center;" id="aSignout">Đăng xuất</a>
+                        </li>
+                    </ul>
+                    
+    
+                </li>
+            </ul>
+        </nav>
+
+        <div class="icons">
+            <div id="menu-btn" class="fas fa-bars"></div>
+            <!-- <div id="search-btn" class="fas fa-search icon-hover"></div> -->
+            <a id="aCart" href="cart.html" class="fas fa-shopping-cart"></a>
+        </div>
+
+        <!-- <form action="" class="search-form">
+            <input type="search" name="" placeholder="Search here..." id="search-box">
+            <label for="search-box" class="fas fa-search"></label>
+        </form> -->
+
+    </header>
+
+    <!-- header section ends -->
+
+    <!-- Start breadcrumb -->
+    <section>
+        <div class="container">
+            <ol class="breadcrumb" itemscope itemtype="http://schema.org/BreadcrumbList">
+                <li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+                    <a itemprop="item" href="home.html">
+                        <span itemprop="name" content="Trang chủ">
+                            <i class="fa-solid fa-house"></i>
+                            Trang chủ
+                        </span>
+                    </a>
+                    <meta itemprop="position" content="1" />
+                </li>
+                <li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+                    <a itemprop="item" href="#" title="Sản phẩm" class="actived"><span itemprop="name"
+                            content="Sản phẩm">Sản phẩm</span></a>
+                    <meta itemprop="position" content="2" />
+                </li>
+            </ol>
+        </div>
+    </section>
+    <!-- end breadcrumb -->
+
+    <!-- filter  -->
+    <section>
+        <div class="container">
+            <div class="product-filters">
+                <strong class="label">Lọc danh sách:</strong>
+                <div class="facet">
+                    <label>
+                        <a href="javascript:;">Thương hiệu</a>
+                        <i class="fa-solid fa-angle-down"></i>
+                    </label>
+                    <div class="sub">
+                        <ul>
+                            <li>
+                                <a href="#Apple" class="filterProduct">Apple</a>
+                            </li>
+                            <li>
+                                <a href="#Samsung" class="filterProduct">Samsung</a>
+                            </li>
+                            <li>
+                                <a href="#Realme" class="filterProduct">Realme</a>
+                            </li>
+                            <li>
+                                <a href="#Xiaomi" class="filterProduct">Xiaomi</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="facet">
+                    <label>
+                        <a href="javascript:;">Giá</a>
+                        <i class="fa-solid fa-angle-down"></i>
+                    </label>
+                    <div class="sub">
+                        <ul>
+                            <li>
+                                <a href="#desc" class="sortProduct">Cao đến thấp</a>
+                            </li>
+                            <li>
+                                <a href="#asc" class="sortProduct">Thấp đến cao</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="facet">
+                    <!-- <label for="">
+                        <div id="search-btn" class="fas fa-search icon-hover"></div>
+                    </label> -->
+                    <div id="search-btn" style="font-size: 2rem;" class="fas fa-search icon-hover"></div>
+
+                    <form action="" class="search-form">
+                        <input type="search" name="" placeholder="Tìm kiếm..." id="search-box">
+                        <label for="search-box" class="fas fa-search" id="btnSearchProduct"></label>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- end filter  -->
+
+    <!-- Product  -->
+    <section>
+        <div class="container">
+            <div class="box-home">
+                <div class="header">
+                    <h4>
+                        <a href="#" class="text-decoration-none">Điện thoại nổi bật</a>
+                    </h4>
+                </div>
+                <div class="item-container lst-product">
+                    <div class="row g-4" id="listProductContent">
+                        <!-- <div class="col-lg-3 col-sm-6 col-6">
+                            <div class="item p-3">
+                                <div class="item-img">
+                                    <a href="#"><img src="images/pro-2.png" style="width: 150px;"
+                                            title="iPhone 11 chính hãng VN/A" alt=""></a>
+                                </div>
+                                <div class="sticker sticker-left">
+                                    <span>
+                                        <img src="images/sticker-apple.png" title="Chính hãng apple" alt="">
+                                    </span>
+                                </div>
+                                <div class="info">
+                                    <a class="text-decoration-none info-text" href="#">iPhone 11 (64GB) chính hãng
+                                        VN/A</a>
+                                    <span class="info-price">
+                                        <strong>19,000,000 đ</strong>
+                                    </span>
+                                </div>
+                                <div class="note">
+                                    <label for="" title="Ưu đãi đến 300.000đ khi mở Ví hoặc thanh toán qua VNPAY">Ưu đãi
+                                        đến 300.000đ khi mở Ví hoặc ...</label>
+                                </div>
+
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-sm-6 col-6">
+                            <div class="item p-3">
+                                <div class="item-img">
+                                    <a href="#"><img src="images/pro-2.png" style="width: 150px;"
+                                            title="iPhone 11 chính hãng VN/A" alt=""></a>
+                                </div>
+                                <div class="sticker sticker-left">
+                                    <span>
+                                        <img src="images/sticker-apple.png" title="Chính hãng apple" alt="">
+                                    </span>
+                                </div>
+                                <div class="info">
+                                    <a class="text-decoration-none info-text" href="#">iPhone 11 (64GB) chính hãng
+                                        VN/A</a>
+                                    <span class="info-price">
+                                        <strong>19,000,000 đ</strong>
+                                    </span>
+                                </div>
+                                <div class="note">
+                                    <label for="" title="Ưu đãi đến 300.000đ khi mở Ví hoặc thanh toán qua VNPAY">Ưu đãi
+                                        đến 300.000đ khi mở Ví hoặc ...</label>
+                                </div>
+
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-sm-6 col-6">
+                            <div class="item p-3">
+                                <div class="item-img">
+                                    <a href="#"><img src="images/pro-2.png" style="width: 150px;"
+                                            title="iPhone 11 chính hãng VN/A" alt=""></a>
+                                </div>
+                                <div class="sticker sticker-left">
+                                    <span>
+                                        <img src="images/sticker-apple.png" title="Chính hãng apple" alt="">
+                                    </span>
+                                </div>
+                                <div class="info">
+                                    <a class="text-decoration-none info-text" href="#">iPhone 11 (64GB) chính hãng
+                                        VN/A</a>
+                                    <span class="info-price">
+                                        <strong>19,000,000 đ</strong>
+                                    </span>
+                                </div>
+                                <div class="note">
+                                    <label for="" title="Ưu đãi đến 300.000đ khi mở Ví hoặc thanh toán qua VNPAY">Ưu đãi
+                                        đến 300.000đ khi mở Ví hoặc ...</label>
+                                </div>
+
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-sm-6 col-6">
+                            <div class="item p-3">
+                                <div class="item-img">
+                                    <a href="#"><img src="images/pro-2.png" style="width: 150px;"
+                                            title="iPhone 11 chính hãng VN/A" alt=""></a>
+                                </div>
+                                <div class="sticker sticker-left">
+                                    <span>
+                                        <img src="images/sticker-apple.png" title="Chính hãng apple" alt="">
+                                    </span>
+                                </div>
+                                <div class="info">
+                                    <a class="text-decoration-none info-text" href="#">iPhone 11 (64GB) chính hãng
+                                        VN/A</a>
+                                    <span class="info-price">
+                                        <strong>19,000,000 đ</strong>
+                                    </span>
+                                </div>
+                                <div class="note">
+                                    <label for="" title="Ưu đãi đến 300.000đ khi mở Ví hoặc thanh toán qua VNPAY">Ưu đãi
+                                        đến 300.000đ khi mở Ví hoặc ...</label>
+                                </div>
+
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-sm-6 col-6">
+                            <div class="item p-3">
+                                <div class="item-img">
+                                    <a href="#"><img src="images/pro-2.png" style="width: 150px;"
+                                            title="iPhone 11 chính hãng VN/A" alt=""></a>
+                                </div>
+                                <div class="sticker sticker-left">
+                                    <span>
+                                        <img src="images/sticker-apple.png" title="Chính hãng apple" alt="">
+                                    </span>
+                                </div>
+                                <div class="info">
+                                    <a class="text-decoration-none info-text" href="#">iPhone 11 (64GB) chính hãng
+                                        VN/A</a>
+                                    <span class="info-price">
+                                        <strong>19,000,000 đ</strong>
+                                    </span>
+                                </div>
+                                <div class="note">
+                                    <label for="" title="Ưu đãi đến 300.000đ khi mở Ví hoặc thanh toán qua VNPAY">Ưu đãi
+                                        đến 300.000đ khi mở Ví hoặc ...</label>
+                                </div>
+
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-sm-6 col-6">
+                            <div class="item p-3">
+                                <div class="item-img">
+                                    <a href="#"><img src="images/pro-2.png" style="width: 150px;"
+                                            title="iPhone 11 chính hãng VN/A" alt=""></a>
+                                </div>
+                                <div class="sticker sticker-left">
+                                    <span>
+                                        <img src="images/sticker-apple.png" title="Chính hãng apple" alt="">
+                                    </span>
+                                </div>
+                                <div class="info">
+                                    <a class="text-decoration-none info-text" href="#">iPhone 11 (64GB) chính hãng
+                                        VN/A</a>
+                                    <span class="info-price">
+                                        <strong>19,000,000 đ</strong>
+                                    </span>
+                                </div>
+                                <div class="note">
+                                    <label for="" title="Ưu đãi đến 300.000đ khi mở Ví hoặc thanh toán qua VNPAY">Ưu đãi
+                                        đến 300.000đ khi mở Ví hoặc ...</label>
+                                </div>
+
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-sm-6 col-6">
+                            <div class="item p-3">
+                                <div class="item-img">
+                                    <a href="#"><img src="images/pro-2.png" style="width: 150px;"
+                                            title="iPhone 11 chính hãng VN/A" alt=""></a>
+                                </div>
+                                <div class="sticker sticker-left">
+                                    <span>
+                                        <img src="images/sticker-apple.png" title="Chính hãng apple" alt="">
+                                    </span>
+                                </div>
+                                <div class="info">
+                                    <a class="text-decoration-none info-text" href="#">iPhone 11 (64GB) chính hãng
+                                        VN/A</a>
+                                    <span class="info-price">
+                                        <strong>19,000,000 đ</strong>
+                                    </span>
+                                </div>
+                                <div class="note">
+                                    <label for="" title="Ưu đãi đến 300.000đ khi mở Ví hoặc thanh toán qua VNPAY">Ưu đãi
+                                        đến 300.000đ khi mở Ví hoặc ...</label>
+                                </div>
+
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-sm-6 col-6">
+                            <div class="item p-3">
+                                <div class="item-img">
+                                    <a href="#"><img src="images/pro-2.png" style="width: 150px;"
+                                            title="iPhone 11 chính hãng VN/A" alt=""></a>
+                                </div>
+                                <div class="sticker sticker-left">
+                                    <span>
+                                        <img src="images/sticker-apple.png" title="Chính hãng apple" alt="">
+                                    </span>
+                                </div>
+                                <div class="info">
+                                    <a class="text-decoration-none info-text" href="#">iPhone 11 (64GB) chính hãng
+                                        VN/A</a>
+                                    <span class="info-price">
+                                        <strong>19,000,000 đ</strong>
+                                    </span>
+                                </div>
+                                <div class="note">
+                                    <label for="" title="Ưu đãi đến 300.000đ khi mở Ví hoặc thanh toán qua VNPAY">Ưu đãi
+                                        đến 300.000đ khi mở Ví hoặc ...</label>
+                                </div>
+
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-sm-6 col-6">
+                            <div class="item p-3">
+                                <div class="item-img">
+                                    <a href="#"><img src="images/pro-2.png" style="width: 150px;"
+                                            title="iPhone 11 chính hãng VN/A" alt=""></a>
+                                </div>
+                                <div class="sticker sticker-left">
+                                    <span>
+                                        <img src="images/sticker-apple.png" title="Chính hãng apple" alt="">
+                                    </span>
+                                </div>
+                                <div class="info">
+                                    <a class="text-decoration-none info-text" href="#">iPhone 11 (64GB) chính hãng
+                                        VN/A</a>
+                                    <span class="info-price">
+                                        <strong>19,000,000 đ</strong>
+                                    </span>
+                                </div>
+                                <div class="note">
+                                    <label for="" title="Ưu đãi đến 300.000đ khi mở Ví hoặc thanh toán qua VNPAY">Ưu đãi
+                                        đến 300.000đ khi mở Ví hoặc ...</label>
+                                </div>
+
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-sm-6 col-6">
+                            <div class="item p-3">
+                                <div class="item-img">
+                                    <a href="#"><img src="images/pro-2.png" style="width: 150px;"
+                                            title="iPhone 11 chính hãng VN/A" alt=""></a>
+                                </div>
+                                <div class="sticker sticker-left">
+                                    <span>
+                                        <img src="images/sticker-apple.png" title="Chính hãng apple" alt="">
+                                    </span>
+                                </div>
+                                <div class="info">
+                                    <a class="text-decoration-none info-text" href="#">iPhone 11 (64GB) chính hãng
+                                        VN/A</a>
+                                    <span class="info-price">
+                                        <strong>19,000,000 đ</strong>
+                                    </span>
+                                </div>
+                                <div class="note">
+                                    <label for="" title="Ưu đãi đến 300.000đ khi mở Ví hoặc thanh toán qua VNPAY">Ưu đãi
+                                        đến 300.000đ khi mở Ví hoặc ...</label>
+                                </div>
+
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-sm-6 col-6">
+                            <div class="item p-3">
+                                <div class="item-img">
+                                    <a href="#"><img src="images/pro-2.png" style="width: 150px;"
+                                            title="iPhone 11 chính hãng VN/A" alt=""></a>
+                                </div>
+                                <div class="sticker sticker-left">
+                                    <span>
+                                        <img src="images/sticker-apple.png" title="Chính hãng apple" alt="">
+                                    </span>
+                                </div>
+                                <div class="info">
+                                    <a class="text-decoration-none info-text" href="#">iPhone 11 (64GB) chính hãng
+                                        VN/A</a>
+                                    <span class="info-price">
+                                        <strong>19,000,000 đ</strong>
+                                    </span>
+                                </div>
+                                <div class="note">
+                                    <label for="" title="Ưu đãi đến 300.000đ khi mở Ví hoặc thanh toán qua VNPAY">Ưu đãi
+                                        đến 300.000đ khi mở Ví hoặc ...</label>
+                                </div>
+
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-sm-6 col-6">
+                            <div class="item p-3">
+                                <div class="item-img">
+                                    <a href="#"><img src="images/pro-2.png" style="width: 150px;"
+                                            title="iPhone 11 chính hãng VN/A" alt=""></a>
+                                </div>
+                                <div class="sticker sticker-left">
+                                    <span>
+                                        <img src="images/sticker-apple.png" title="Chính hãng apple" alt="">
+                                    </span>
+                                </div>
+                                <div class="info">
+                                    <a class="text-decoration-none info-text" href="#">iPhone 11 (64GB) chính hãng
+                                        VN/A</a>
+                                    <span class="info-price">
+                                        <strong>19,000,000 đ</strong>
+                                    </span>
+                                </div>
+                                <div class="note">
+                                    <label for="" title="Ưu đãi đến 300.000đ khi mở Ví hoặc thanh toán qua VNPAY">Ưu đãi
+                                        đến 300.000đ khi mở Ví hoặc ...</label>
+                                </div>
+
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-sm-6 col-6">
+                            <div class="item p-3">
+                                <div class="item-img">
+                                    <a href="#"><img src="images/pro-2.png" style="width: 150px;"
+                                            title="iPhone 11 chính hãng VN/A" alt=""></a>
+                                </div>
+                                <div class="sticker sticker-left">
+                                    <span>
+                                        <img src="images/sticker-apple.png" title="Chính hãng apple" alt="">
+                                    </span>
+                                </div>
+                                <div class="info">
+                                    <a class="text-decoration-none info-text" href="#">iPhone 11 (64GB) chính hãng
+                                        VN/A</a>
+                                    <span class="info-price">
+                                        <strong>19,000,000 đ</strong>
+                                    </span>
+                                </div>
+                                <div class="note">
+                                    <label for="" title="Ưu đãi đến 300.000đ khi mở Ví hoặc thanh toán qua VNPAY">Ưu đãi
+                                        đến 300.000đ khi mở Ví hoặc ...</label>
+                                </div>
+
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-sm-6 col-6">
+                            <div class="item p-3">
+                                <div class="item-img">
+                                    <a href="#"><img src="images/pro-2.png" style="width: 150px;"
+                                            title="iPhone 11 chính hãng VN/A" alt=""></a>
+                                </div>
+                                <div class="sticker sticker-left">
+                                    <span>
+                                        <img src="images/sticker-apple.png" title="Chính hãng apple" alt="">
+                                    </span>
+                                </div>
+                                <div class="info">
+                                    <a class="text-decoration-none info-text" href="#">iPhone 11 (64GB) chính hãng
+                                        VN/A</a>
+                                    <span class="info-price">
+                                        <strong>19,000,000 đ</strong>
+                                    </span>
+                                </div>
+                                <div class="note">
+                                    <label for="" title="Ưu đãi đến 300.000đ khi mở Ví hoặc thanh toán qua VNPAY">Ưu đãi
+                                        đến 300.000đ khi mở Ví hoặc ...</label>
+                                </div>
+
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-sm-6 col-6">
+                            <div class="item p-3">
+                                <div class="item-img">
+                                    <a href="#"><img src="images/pro-2.png" style="width: 150px;"
+                                            title="iPhone 11 chính hãng VN/A" alt=""></a>
+                                </div>
+                                <div class="sticker sticker-left">
+                                    <span>
+                                        <img src="images/sticker-apple.png" title="Chính hãng apple" alt="">
+                                    </span>
+                                </div>
+                                <div class="info">
+                                    <a class="text-decoration-none info-text" href="#">iPhone 11 (64GB) chính hãng
+                                        VN/A</a>
+                                    <span class="info-price">
+                                        <strong>19,000,000 đ</strong>
+                                    </span>
+                                </div>
+                                <div class="note">
+                                    <label for="" title="Ưu đãi đến 300.000đ khi mở Ví hoặc thanh toán qua VNPAY">Ưu đãi
+                                        đến 300.000đ khi mở Ví hoặc ...</label>
+                                </div>
+
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-sm-6 col-6">
+                            <div class="item p-3">
+                                <div class="item-img">
+                                    <a href="#"><img src="images/pro-2.png" style="width: 150px;"
+                                            title="iPhone 11 chính hãng VN/A" alt=""></a>
+                                </div>
+                                <div class="sticker sticker-left">
+                                    <span>
+                                        <img src="images/sticker-apple.png" title="Chính hãng apple" alt="">
+                                    </span>
+                                </div>
+                                <div class="info">
+                                    <a class="text-decoration-none info-text" href="#">iPhone 11 (64GB) chính hãng
+                                        VN/A</a>
+                                    <span class="info-price">
+                                        <strong>19,000,000 đ</strong>
+                                    </span>
+                                </div>
+                                <div class="note">
+                                    <label for="" title="Ưu đãi đến 300.000đ khi mở Ví hoặc thanh toán qua VNPAY">Ưu đãi
+                                        đến 300.000đ khi mở Ví hoặc ...</label>
+                                </div>
+
+                            </div>
+                        </div> -->
+
+
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+    <!-- end product  -->
+
+    <!-- core value -->
+    <section>
+        <div class="container">
+            <div class="corevalue">
+                <div class="item">
+                    <span class="corevalue-icon">
+                        <i class="fa-regular fa-circle-check"></i>
+                    </span>
+                    <div class="corevalue-content">
+                        <span>Sản phẩm</span>
+                        <strong>Chính hãng</strong>
+                    </div>
+                </div>
+                <div class="item">
+                    <span class="corevalue-icon">
+                        <i class="fa-solid fa-truck-front"></i>
+                    </span>
+                    <div class="corevalue-content">
+                        <span>Giao hàng</span>
+                        <strong>Miễn phí</strong>
+                    </div>
+                </div>
+                <div class="item">
+                    <span class="corevalue-icon">
+                        <i class="fa-solid fa-headset"></i>
+                    </span>
+                    <div class="corevalue-content">
+                        <span>Hotline hỗ trợ</span>
+                        <strong>1900 0000</strong>
+                    </div>
+                </div>
+                <div class="item">
+                    <span class="corevalue-icon">
+                        <i class="fa-solid fa-arrows-rotate"></i>
+                    </span>
+                    <div class="corevalue-content">
+                        <span>Thủ tục đổi trả</span>
+                        <strong>Dễ dàng</strong>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- end core value -->
+
+    <!-- footer section starts  -->
+
+    <footer>
+        <div class="container footer-bg">
+            <div class="col-content">
+                <div class="link-content">
+                    <h4><a>Hỗ trợ - Dịch vụ</a></h4>
+                    <ul>
+                        <li><a href="#">Mua hàng trả góp</a></li>
+                        <li><a href="#">Hướng dẫn đặt hàng và thanh toán</a></li>
+                        <li><a href="#">Tra cứu đơn hàng</a></li>
+                        <li><a href="#">Chính sách bảo hành</a></li>
+                        <li><a href="#">Chính sách bảo mật</a></li>
+                        <li><a href="#">Chính sách giải quyết khiếu nại</a></li>
+                        <li><a href="#">Điều khoản mua bán hàng hóa</a></li>
+                        <li><a href="#">Câu hỏi thường gặp</a></li>
+                        <li><a href="#">Phạm vi, điều khoản gói bảo hành mở rộng</a></li>
+                    </ul>
+                </div>
+                <div class="link-content">
+                    <h4><a>Thông tin liên hệ</a></h4>
+                    <ul>
+                        <li><a href="#">Bán hàng online</a></li>
+                        <li><a href="#">Chăm sóc khách hàng</a></li>
+                        <li><a href="#">Hỗ trợ kỹ thuật</a></li>
+                        <li><a href="#">Hỗ trợ bảo hành và sửa chữa</a></li>
+                        <li><a href="#">Liên hệ khối văn phòng</a></li>
+                        <li><a href="#">Hợp tác kinh doanh</a></li>
+                        <li><a href="#">Trung tâm bảo hành</a></li>
+                    </ul>
+                </div>
+                <div class="link-content">
+                    <h4><a>Hệ thống cửa hàng</a></h4>
+                    <ul>
+                        <li><a href="#">Hệ thống cửa hàng</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4>Tổng đài</h4>
+                    <a class="hotline" href="tel:0906536418">090 6536418</a>
+                </div>
+                <div>
+                    <h4>Thanh toán miễn phí</h4>
+                    <ul class="list-logo">
+                        <li class="d-flex">
+                            <img src="images/logo-visa.png" alt="">
+                            <img src="images/logo-master.png" alt="">
+                        </li>
+                        <li class="d-flex">
+                            <img src="images/logo-jcb.png" alt="">
+                            <img src="images/logo-samsungpay.png" alt="">
+                        </li>
+                        <li class="d-flex">
+                            <img src="images/logo-atm.png" alt="">
+                            <img src="images/logo-vnpay.png" alt="">
+                        </li>
+                    </ul>
+                </div>
+                <div>
+                    <h4>Hình thức vận chuyển</h4>
+                    <ul class="list-logo">
+                        <li class="d-flex">
+                            <img src="images/nhattin.jpg" alt="">
+                            <img src="images/vnpost.jpg" alt="">
+                        </li>
+                    </ul>
+                    <div class="mg-top20">
+                        <a href="#">
+                            <img src="images/logo-bct.png" alt="">
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-info">
+                <p>
+                    © 2020. CÔNG TY CỔ PHẦN XÂY DỰNG VÀ ĐẦU TƯ THƯƠNG MẠI UIT. MST: 0106713191. (Đăng ký lần đầu: Ngày
+                    15 tháng 12 năm 2014, Đăng ký thay đổi ngày 24/11/2022)
+                </p>
+                <p>
+                    <strong>GP số 426/GP-TTĐT do sở TTTT Hà Nội cấp ngày 22/01/2021</strong>
+                </p>
+                <p>
+                    Địa chỉ: Số 89 Đường Tam Trinh, Phường Mai Động, Quận Hoàng Mai, Thành Phố Hà Nội, Việt Nam. Điện
+                    thoại: 1900.2091. Chịu trách nhiệm nội dung:
+                    <strong>Ngô Phương Nam</strong>.
+                </p>
+            </div>
+        </div>
+        <div class="backtotop">
+            <button id="btnToTop" title="Quay lại dầu trang">
+                <i class="fa-solid fa-arrow-up"></i>
+            </button>
+        </div>
+    </footer>
+
+    <!-- footer section ends -->
+
+</body>
+
+</html>

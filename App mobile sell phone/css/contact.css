@@ -1,0 +1,57 @@
+.contact-page {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.contact-page .contact-content {
+    width: 40%;
+}
+
+.contact-page .contact-content span {
+    font-size: 1.6rem;
+    color: #aaa;
+}
+
+.contact-page h2 {
+    font-size: 2.6rem;
+    line-height: 35px;
+    padding: 20px 0;
+}
+
+.contact-page h3 {
+    font-size: 1.6rem;
+    padding-bottom: 15px;
+}
+
+.contact-page li {
+    list-style: none;
+    display: flex;
+    padding: 10px 0;
+}
+
+.contact-page li i {
+    font-size: 1.4rem;
+    padding-right: 22px;
+    text-align: center;
+    line-height: unset;
+}
+
+.contact-page li p {
+    margin: 0;
+    font-size: 1.8rem;
+}
+
+.contact-page li a {
+    font-size: 1.8rem;
+}
+
+.contact-page map {
+    width: 55%;
+    height: 400px;
+}
+
+.contact-page map iframe {
+    width: 100%;
+    height: 100%;
+}

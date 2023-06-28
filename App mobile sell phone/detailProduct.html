@@ -1,0 +1,659 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>home</title>
+
+    <!-- font awesome cdn link  -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- custom css file link  -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11.0.18/dist/sweetalert2.min.css" />
+    <link rel="stylesheet" href="owlcarousel/assets/owl.carousel.min.css">
+    <link rel="stylesheet" href="owlcarousel/assets/owl.theme.default.min.css">
+    <link rel="stylesheet" href="css/jssor.css">
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/product-detail.css">
+    <link rel="stylesheet" href="css/responsive.css">
+
+    <!-- custom js file link  -->
+    <script src="https://code.jquery.com/jquery-3.7.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="owlcarousel/owl.carousel.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.0.18/dist/sweetalert2.min.js"></script>
+    <script type="module" src="js/script.js" defer></script>
+
+</head>
+
+<body>
+
+    <!-- header section starts  -->
+
+    <header class="header-page">
+
+        <a href="home.html" class="header-logo">
+            <img class="logo logo-mobile" src="images/logo.png" alt="">
+        </a>
+
+        <nav class="navbar">
+            <ul>
+                <li><a id="aHome" class="nav-link" href="home.html">Trang chủ</a></li>
+                <li><a class="nav-link" href="products.html">Sản phẩm</a></li>
+                <li><a class="nav-link" href="#">Thông tin</a>
+                    <ul class="pr-20">
+                        <li><a class="nav-link border-bottom" href="about.html">Về chúng tôi</a></li>
+                        <li><a class="nav-link" href="blogs.html">Blogs</a></li>
+                    </ul>
+                </li>
+                <li><a class="nav-link" href="contact.html">Liên hệ</a></li>
+                <li><a class="nav-link" href="#">Tài khoản</a>
+                    <ul class="pr-20" id="extensionAccount">
+                        <li id="liLogin"><a class="nav-link border-bottom" href="login.html">Đăng nhập</a></li>
+                        <li id="liRegister"><a class="nav-link" href="register.html">Đăng ký</a></li>
+                        <li id="liUser">
+                            <div class="user-content border-bottom">
+                                <a href="userpage.html">
+                                    <div class="d-flex align-items-center user-detail">
+                                        <i class="fa-solid fa-user"></i>
+                                        <span class="username" id="nameCustomer">Huỳnh Mai Cao Nhân</span>
+                                    </div>
+                                </a>
+                            </div>
+                        </li>
+                        
+                        <li id="liSignOut">
+                            <a href="#" class="f-size-2" style="padding: 2rem; text-align: center;" id="aSignout">Đăng xuất</a>
+                        </li>
+                    </ul>
+                    
+    
+                </li>
+            </ul>
+        </nav>
+
+        <div class="icons">
+            <div id="menu-btn" class="fas fa-bars"></div>
+            <!-- <div id="search-btn" class="fas fa-search icon-hover"></div> -->
+            <a id="aCart" href="cart.html" class="fas fa-shopping-cart"></a>
+        </div>
+
+        <!-- <form action="" class="search-form">
+            <input type="search" name="" placeholder="Search here..." id="search-box">
+            <label for="search-box" class="fas fa-search"></label>
+        </form> -->
+
+    </header>
+
+    <!-- Start breadcrumb -->
+
+    <section>
+        <div class="container">
+            <ol class="breadcrumb" itemscope itemtype="http://schema.org/BreadcrumbList">
+                <li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+                    <a itemprop="item" href="home.html">
+                        <span itemprop="name" content="Trang chủ">
+                            <i class="fa-solid fa-house"></i> 
+                            Trang chủ
+                        </span>
+                    </a>
+                    <meta itemprop="position" content="1" />
+                </li>
+                <li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+                    <a itemprop="item" href="products.html" title="Sản phẩm" class="actived"><span itemprop="name" content="Sản phẩm">Sản phẩm</span></a>
+                    <meta itemprop="position" content="2" />
+                </li>
+                <li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+                    <a itemprop="item" href="#" title="Apple iPhone 13" class="actived"><span itemprop="name" content="iPhone 13">iPhone 13</span></a>
+                    <meta itemprop="position" content="3" />
+                </li>
+            </ol>
+        </div>
+    </section>
+
+    <!-- end breadcrumb -->
+
+    <!-- Start detail  -->
+
+    <section>
+        <div class="container">
+            <div class="product-details">
+                <div class="top-product">
+                    <h1 id="nameProduct">
+                        Apple iPhone 11 - 128GB - Chính hãng VN/A
+                    </h1>
+                </div>
+                <div class="product-details-container">
+                    <img id="imageProduct" src="images/pro-detail-1.png"/>
+
+                    <!-- <div class="product-image">
+
+                            Loading Screen
+                        <div id="jssor_1" style="position:relative;margin:0 auto;top:0px;left:0px;width:400px;height:470px;overflow:hidden;visibility:hidden;">
+                            <div data-u="loading" style="position:absolute;top:0px;left:0px;width:100%;height:100%;text-align:center;background-position:50% 50%;background-repeat:no-repeat;background-image:url('img/double-tail-spin-x.svg');background-color:rgba(0, 0, 0, 0.7);background-size:40px 40px;"></div>
+                            <div id="slideImages" data-u="slides" style="cursor:default;position:relative;top:0px;left:0px;width:400px;height:470px;overflow:hidden;">
+                                <div>
+                                    <img data-u="image" src="images/pro-detail-1.png" />
+                                    <img data-u="thumb" src="images/pro-detail-1-s.png" />
+                                </div>
+                                <div>
+                                    <img data-u="image" src="images/pro-detail-2.png" />
+                                    <img data-u="thumb" src="images/pro-detail-2-s.png" />
+                                </div>
+                                <div>
+                                    <img data-u="image" src="images/pro-detail-3.png" />
+                                    <img data-u="thumb" src="images/pro-detail-3-s.png" />
+                                </div>
+                                <div>
+                                    <img data-u="image" src="images/pro-detail-4.png" />
+                                    <img data-u="thumb" src="images/pro-detail-4-s.png" />
+                                </div>
+                                <div>
+                                    <img data-u="image" src="images/pro-detail-5.png" />
+                                    <img data-u="thumb" src="images/pro-detail-5-s.png" />
+                                </div>
+                            </div><a data-scale="0" href="https://www.jssor.com" style="display:none;position:absolute;">html carousel</a>
+                            Thumbnail Navigator
+                            <div data-u="thumbnavigator" class="jssort101" style="position:absolute;left:0px;bottom:0px;width:400px;height:100px;background-color:rgba(0,0,0,0);" data-autocenter="1" data-scale-bottom="0.75">
+                                <div class="bg-shadow" style="top: 15px;left: 0px;width: 400px;height: 80px;position: absolute;box-shadow: 0px 4px 6px #00000029; border-radius: 8px; background-color: white;"></div>
+                                <div data-u="slides">
+                                    <div data-u="prototype" class="p" style="width:65px;height:65px;">
+                                        <div data-u="thumbnailtemplate" class="t"></div>
+
+                                    </div>
+                                </div>
+                                <span class="slider-t-l">
+									<i class="fa-solid fa-caret-left"></i>
+								</span>
+								<span class="slider-t-r">
+									<i class="fa-solid fa-caret-right"></i>
+								</span>
+                            </div>
+                            Arrow Navigator
+                            <div data-u="arrowleft" class="jssora112" style="width:55px;height:55px;top:162px;left:30px;" data-autocenter="2" data-scale="0.75" data-scale-left="0.75">
+                                <svg viewbox="0 0 16000 16000" style="position:absolute;top:0;left:0;width:100%;height:100%;">
+                                    <path class="a" d="M4576,7719.7l5678-5677.8c81.3-81.2,174.8-121.9,280.3-121.9c105.6,0,199,40.8,280.3,121.9 l609.1,609.2c81.3,81.2,121.8,174.5,121.8,280.3c0,105.8-40.5,199-121.8,280.3L6635.2,8000.1l4788.4,4788.5 c81.3,81.2,121.8,174.7,121.8,280.1c0,105.7-40.5,199.2-121.8,280.4l-609.2,609c-81.2,81.3-174.7,121.8-280.3,121.8 c-105.5,0-199-40.6-280.3-121.8L4576.3,8280.4c-81.2-81.2-121.8-174.7-121.8-280.3C4454.5,7894.5,4494.8,7801.1,4576,7719.7z"></path>
+                                </svg>
+                            </div>
+                            <div data-u="arrowright" class="jssora112" style="width:55px;height:55px;top:162px;right:30px;" data-autocenter="2" data-scale="0.75" data-scale-right="0.75">
+                                <svg viewbox="0 0 16000 16000" style="position:absolute;top:0;left:0;width:100%;height:100%;">
+                                    <path class="a" d="M11424,7719.7L5746,2041.9c-81.3-81.2-174.8-121.9-280.3-121.9c-105.6,0-199,40.8-280.3,121.9 l-609.1,609.2c-81.3,81.2-121.8,174.5-121.8,280.3c0,105.8,40.5,199,121.8,280.3l4788.4,4788.4l-4788.4,4788.5 c-81.3,81.2-121.8,174.7-121.8,280.1c0,105.7,40.5,199.2,121.8,280.4l609.2,609c81.2,81.3,174.7,121.8,280.3,121.8 c105.5,0,199-40.6,280.3-121.8l5677.7-5677.8c81.2-81.2,121.8-174.7,121.8-280.3C11545.5,7894.5,11505.2,7801.1,11424,7719.7z"></path>
+                                </svg>
+                            </div>
+                        </div>
+                    </div> -->
+                    <div class="product-center" style="position: relative;">
+                        <p class="price current-product-price">
+                            <strong id="priceProduct">16.900.000 ₫</strong>
+                            <i> | Giá đã bao gồm 10% VAT</i>
+                        </p>
+
+                        <p class="freeship">
+                            <i class="fa-solid fa-truck-fast"></i>
+                            <span> MIỄN PHÍ VẬN CHUYỂN TOÀN QUỐC</span>
+                        </p>
+
+                        <!-- <div class="product-option version">
+                            <strong class="label">Lựa chọn phiên bản</strong>
+                            <div class="options" id="versionOption">
+                                <div class="item selected">
+                                    <a href="#">
+                                        <span>
+                                            <label>
+                                                <strong>128GB</strong>
+                                            </label>
+                                        </span>
+                                        <strong>16.900.000 ₫</strong>
+                                    </a>
+                                </div>
+                                <div class="item">
+                                    <a href="#">
+                                        <span>
+                                            <label>
+                                                <strong>256GB</strong>
+                                            </label>
+                                        </span>
+                                        <strong>19.900.000 ₫</strong>
+                                    </a>
+                                </div>
+                            </div>
+                        </div> -->
+
+                        <div class="renew" style="border:1px solid #ddd; border-radius:5px; margin:5px 0; padding:8px; background:#fff; text-align:center;">
+                            <div>
+                                Trợ giá lên tới 
+                                <strong class="renewPrice">1.000.000 ₫ </strong>
+                                khi thu cũ đổi mới.
+                            </div>
+                            <div>
+                                Giá chỉ còn 
+                                <strong id="productDisPrice" class="renewValue text-red">15,390,000 ₫</strong>
+                            </div>
+                        </div>
+
+                        <!-- <div class="product-promotion">
+                            <strong class="label text-green">ƯU ĐÃI ĐI KÈM</strong>
+                            <ul>
+                                <li>
+                                    <i class="fa-solid fa-check text-green"></i>
+                                    <a href="#" style="font-weight: normal;">Giảm thêm tới 1.000.000đ khi Thu cũ - Lên đời iPhone 11 | 12 | 13 Series.</a>
+                                </li>
+                                <li>
+                                    <i class="fa-solid fa-check text-green"></i>
+                                    <a href="#" style="font-weight: normal;">Thu cũ iPhone VN/A giá cao lên đời iPhone mới.</a>
+                                </li>
+                                <li>
+                                    <i class="fa-solid fa-check text-green"></i>
+                                    <a href="#" style="font-weight: normal;">Tặng SIM MobiFone Hera 5G (đơn hàng tại chi nhánh) hoặc SIM Wintel (đơn hàng online / tại chi nhánh).</a>
+                                </li>
+                                <li>
+                                    <i class="fa-solid fa-check text-green"></i>
+                                    <a href="#" style="font-weight: normal;">Giảm thêm tới 1.000.000đ khi Thu cũ - Lên đời iPhone 11 | 12 | 13 Series</a>
+                                </li>
+                                <li>
+                                    <i class="fa-solid fa-check text-green"></i>
+                                    <a href="#" style="font-weight: normal;">Giảm thêm tới 1.000.000đ khi Thu cũ - Lên đời iPhone 11 | 12 | 13 Series</a>
+                                </li>
+                            </ul>
+                        </div> -->
+
+                        <div class="product-action" id="btnAddCart">
+                            <!-- <a href="#" title="Mua ngay" class="btn-red btnQuickOrder btnbuy">
+                                <strong>MUA NGAY</strong>
+                                <span>  Giao tận nhà (COD),
+                                        hoặc nhận tại cửa hàng
+                                </span>
+                            </a> -->
+
+                            <a href="#" title="Mua trả góp" class="btnAddCart btn-orange btnbuy">
+                                <i class="fa-solid fa-cart-shopping"></i>
+                                <!-- <strong>Thêm vào giỏ hàng</strong> -->
+                                <br>
+                                <span >Thêm giỏ hàng</span>
+                            </a>
+                        </div>
+
+                        <div class="product-configuration" style="padding:15px; border-radius:6px; background:#fff; margin-top:15px;">
+                            <div class="product-specs">
+                                <i class="fa-solid fa-gear"></i>
+                                <h3>Thông số kỹ thuật</h3>
+                            </div>
+                            <div id="specificationsProduct" class="specs-special" >
+                                <ol>
+                                    <li>
+                                        <strong>Màn hình:</strong>
+                                        <span>Super Retina XDR</span>
+                                    </li>
+                                </ol>
+                                <ol>
+                                    <li>
+                                        <strong>Hệ điều hành:</strong>
+                                        <span>IOS</span>
+                                    </li>
+                                </ol>
+                                <ol>
+                                    <li>
+                                        <strong>Camera trước:</strong>
+                                        <span>12MP</span>
+                                    </li>
+                                </ol>
+                                <ol>
+                                    <li>
+                                        <strong>Camera sau:</strong>
+                                        <span>12MP</span>
+                                    </li>
+                                </ol>
+                                <ol>
+                                    <li>
+                                        <strong>Ram:</strong>
+                                        <span>4GB</span>
+                                    </li>
+                                </ol>
+                                <ol>
+                                    <li>
+                                        <strong>Bộ nhớ trong(ROM):</strong>
+                                        <span>128GB</span>
+                                    </li>
+                                </ol>
+                                <ol>
+                                    <li>
+                                        <strong>Chip:</strong>
+                                        <span>A15 Bionic</span>
+                                    </li>
+                                </ol>
+                                <ol>
+                                    <li>
+                                        <strong>Sim:</strong>
+                                        <span>1 eSIM, 1 SIM vật lý</span>
+                                    </li>
+                                </ol>
+                                <ol>
+                                    <li>
+                                        <strong>Dung lượng pin:</strong>
+                                        <span>10000 mAH</span>
+                                    </li>
+                                </ol>
+                                <ol>
+                                    <li>
+                                        <strong>Màu sắc:</strong>
+                                        <span>Hồng</span>
+                                    </li>
+                                </ol>
+                            </div>
+                        </div>
+
+                        <div class="product-promotion">
+                            <div class="mg-top15">
+                                <ul>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="product-shop">
+                        <div class="warranty">
+                            <h4>THÔNG TIN BẢO HÀNH</h4>
+                            <p>
+                                <i class="fa-solid fa-user-shield"></i>
+                                <span>
+                                    <strong>Bảo hành chính hãng 12 tháng tại trung tâm bảo hành ủy quyền Apple tại Việt Nam</strong>
+                                </span>
+                            </p>
+                            <p>
+                                <i class="fa-solid fa-user-shield"></i>
+                                <strong>
+                                    <span>Bao xài lỗi 1 đổi 1 trong 30 ngày với lỗi phần cứng do nhà sản xuất.</span>
+                                </strong>
+                            </p>
+                        </div>
+
+                        <div class="check-stock" id="marketFilter">
+                            <div class="city">
+                                <p>Địa chỉ cửa hàng</p>
+                                <span class="button">
+                                    <i class="fa-solid fa-location-dot"></i>
+                                    <label>TP. Hồ Chí Minh</label>
+                                </span>
+                            </div>
+                            <div class="stock-sum" id="stock-sum"></div>
+                            <div class="store">
+                                <ul>
+                                    <li class="hide">
+                                        <span>
+                                            <label>Khu phố 6, P.Linh Trung, Tp.Thủ Đức, Tp.Hồ Chí Minh</label>
+                                            <label class="data">
+                                                <strong>
+                                                    <i class="fa-solid fa-phone"></i>
+                                                    <a href="tel: 1900.1000">090 6536418</a>
+                                                </strong>
+                                                -
+                                                <i class="fa-solid fa-location-dot"></i>
+                                                <a href="https://goo.gl/maps/gGj9YTFkGdPaiQqeA" title="Khu phố 6, P.Linh Trung, Tp.Thủ Đức, Tp.Hồ Chí Minh" target="_blank">Chỉ đường</a>
+                                            </label>
+                                        </span>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <!-- <div class="out-date">
+                            <p class="title">
+                                <strong>
+                                    <a href="#">ĐTDĐ Apple iPhone 13 128GB Starlight_MLPG3VN/A  - TBH</a>
+                                </strong>
+                            </p>
+                            <p class="note">
+                                <p>
+                                    <i>Giá chỉ từ: </i>
+                                    <strong class="text-red">14,790,000 ₫</strong>
+                                </p>
+                                <p>
+                                    <i>Tiết kiệm: </i>
+                                    <strong class="text-red">1,600,000 ₫</strong>
+                                </p>
+                                <p>
+                                    <i>Bảo hành tới: </i>
+                                    <strong>28/4/2024</strong>
+                                </p>
+                            </p>
+                        </div> -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- end detail  -->
+
+    <!-- Description -->
+    <section>
+        <div class="container">
+            <div class="product-intro">
+                <div class="product-text" id="productContent" style="height: auto;">
+                    <p style="text-align: center;">
+                        <span style="font-size: 18pt; line-height: 24px;">Mô tả sản phẩm</span>
+                    </p>
+                    <p>
+                        <span id="describeProduct">
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sit amet pharetra enim. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse fermentum accumsan pretium. Quisque sagittis ipsum id velit dictum condimentum. Pellentesque blandit lorem neque, at mollis neque molestie ut. Nam et eleifend turpis. Fusce laoreet nulla nec risus placerat, id congue metus condimentum. Quisque eget enim tempus lectus sodales condimentum et vel libero. Pellentesque nec massa nec purus scelerisque mollis eu sed magna.
+
+Vestibulum vitae auctor nisi. Quisque varius porttitor dui, non faucibus ligula dapibus sit amet. Donec sed viverra ipsum. In a convallis libero. Donec condimentum condimentum ante id gravida. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Maecenas id tortor eget sem tristique maximus. Aliquam ut auctor odio, vel vestibulum sem. Donec vitae felis purus. Sed ac facilisis velit. Nulla cursus pharetra nisl, nec dignissim dolor tincidunt ut. Nunc ut rutrum metus. Proin vel varius ante.
+
+Integer sodales quis massa ut ultrices. Suspendisse est dui, pharetra at turpis id, commodo semper justo. Sed velit turpis, commodo sit amet elit sed, dapibus sollicitudin sem. Mauris volutpat risus vel est finibus, vel facilisis nunc cursus. Nunc vehicula molestie ultrices. Nullam eu quam lacus. Vivamus vehicula mi sit amet lorem convallis, at laoreet leo fermentum. Aenean tristique rutrum leo, ac suscipit eros sodales et.
+
+Nam at faucibus erat. Etiam imperdiet massa nunc, fermentum varius ex molestie a. Pellentesque pulvinar tempor ante id interdum. Vivamus velit felis, auctor et sapien mattis, congue lobortis ex. Nunc bibendum eleifend ex, ut consequat tellus egestas sed. Etiam eget metus nibh. Cras urna orci, commodo nec fermentum eget, commodo vitae augue. Nulla facilisi. Aenean rhoncus, tellus ut fermentum lobortis, dui urna blandit nibh, a feugiat augue elit vel quam. Nunc faucibus id sem a maximus. Morbi hendrerit odio lorem, non sagittis ex dictum bibendum. Curabitur augue dui, venenatis sed libero eu, tincidunt sodales nunc. Mauris sed felis arcu. Proin sed odio diam. Etiam hendrerit lectus sit amet sapien iaculis, et iaculis ex vulputate. Aliquam eleifend tempor tempor.
+                        </span>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- end description  -->
+
+    <!-- core value -->
+    <section>
+        <div class="container">
+            <div class="corevalue">
+                <div class="item">
+                    <span class="corevalue-icon">
+                        <i class="fa-regular fa-circle-check"></i>
+                    </span>
+                    <div class="corevalue-content">
+                        <span>Sản phẩm</span>
+                        <strong>Chính hãng</strong>
+                    </div>
+                </div>
+                <div class="item">
+                    <span class="corevalue-icon">
+                        <i class="fa-solid fa-truck-front"></i>
+                    </span>
+                    <div class="corevalue-content">
+                        <span>Giao hàng</span>
+                        <strong>Miễn phí</strong>
+                    </div>
+                </div>
+                <div class="item">
+                    <span class="corevalue-icon">
+                        <i class="fa-solid fa-headset"></i>
+                    </span>
+                    <div class="corevalue-content">
+                        <span>Hotline hỗ trợ</span>
+                        <strong>1900 0000</strong>
+                    </div>
+                </div>
+                <div class="item">
+                    <span class="corevalue-icon">
+                        <i class="fa-solid fa-arrows-rotate"></i>
+                    </span>
+                    <div class="corevalue-content">
+                        <span>Thủ tục đổi trả</span>
+                        <strong>Dễ dàng</strong>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- end core value -->
+
+
+    <!-- footer section starts  -->
+
+    <footer>
+        <div class="container footer-bg">
+            <div class="col-content">
+                <div class="link-content">
+                    <h4><a>Hỗ trợ - Dịch vụ</a></h4>
+                    <ul>
+                        <li><a href="#">Mua hàng trả góp</a></li>
+                        <li><a href="#">Hướng dẫn đặt hàng và thanh toán</a></li>
+                        <li><a href="#">Tra cứu đơn hàng</a></li>
+                        <li><a href="#">Chính sách bảo hành</a></li>
+                        <li><a href="#">Chính sách bảo mật</a></li>
+                        <li><a href="#">Chính sách giải quyết khiếu nại</a></li>
+                        <li><a href="#">Điều khoản mua bán hàng hóa</a></li>
+                        <li><a href="#">Câu hỏi thường gặp</a></li>
+                        <li><a href="#">Phạm vi, điều khoản gói bảo hành mở rộng</a></li>
+                    </ul>
+                </div>
+                <div class="link-content">
+                    <h4><a>Thông tin liên hệ</a></h4>
+                    <ul>
+                        <li><a href="#">Bán hàng online</a></li>
+                        <li><a href="#">Chăm sóc khách hàng</a></li>
+                        <li><a href="#">Hỗ trợ kỹ thuật</a></li>
+                        <li><a href="#">Hỗ trợ bảo hành và sửa chữa</a></li>
+                        <li><a href="#">Liên hệ khối văn phòng</a></li>
+                        <li><a href="#">Hợp tác kinh doanh</a></li>
+                        <li><a href="#">Trung tâm bảo hành</a></li>
+                    </ul>
+                </div>
+                <div class="link-content">
+                    <h4><a>Hệ thống cửa hàng</a></h4>
+                    <ul>
+                        <li><a href="#">Hệ thống cửa hàng</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4>Tổng đài</h4>
+                    <a class="hotline" href="tel:0906536418">090 6536418</a>
+                </div>
+                <div>
+                    <h4>Thanh toán miễn phí</h4>
+                    <ul class="list-logo">
+                        <li class="d-flex">
+                            <img src="images/logo-visa.png" alt="">
+                            <img src="images/logo-master.png" alt="">
+                        </li>
+                        <li class="d-flex">
+                            <img src="images/logo-jcb.png" alt="">
+                            <img src="images/logo-samsungpay.png" alt="">
+                        </li>
+                        <li class="d-flex">
+                            <img src="images/logo-atm.png" alt="">
+                            <img src="images/logo-vnpay.png" alt="">
+                        </li>
+                    </ul>
+                </div>
+                <div>
+                    <h4>Hình thức vận chuyển</h4>
+                    <ul class="list-logo">
+                        <li class="d-flex">
+                            <img src="images/nhattin.jpg" alt="">
+                            <img src="images/vnpost.jpg" alt="">
+                        </li>
+                    </ul>
+                    <div class="mg-top20">
+                        <a href="#">
+                            <img src="images/logo-bct.png" alt="">
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-info">
+                <p>
+                    © 2020. CÔNG TY CỔ PHẦN XÂY DỰNG VÀ ĐẦU TƯ THƯƠNG MẠI UIT. MST: 0106713191. (Đăng ký lần đầu: Ngày
+                    15 tháng 12 năm 2014, Đăng ký thay đổi ngày 24/11/2022)
+                </p>
+                <p>
+                    <strong>GP số 426/GP-TTĐT do sở TTTT Hà Nội cấp ngày 22/01/2021</strong>
+                </p>
+                <p>
+                    Địa chỉ: Số 89 Đường Tam Trinh, Phường Mai Động, Quận Hoàng Mai, Thành Phố Hà Nội, Việt Nam. Điện
+                    thoại: 1900.2091. Chịu trách nhiệm nội dung:
+                    <strong>Ngô Phương Nam</strong>.
+                </p>
+            </div>
+        </div>
+        <div class="backtotop">
+            <button id="btnToTop" title="Quay lại dầu trang">
+                <i class="fa-solid fa-arrow-up"></i>
+            </button>
+        </div>
+    </footer>
+
+    <!-- footer section ends -->
+    <!-- script  -->
+    <script src="js/jssor.slider-28.1.0.min.js" type="text/javascript"></script>
+    <script type="text/javascript">
+        window.jssor_1_slider_init = function() {
+
+            var jssor_1_SlideshowTransitions = [
+              {$Duration:800,x:-0.3,$SlideOut:true,$Easing:{$Left:$Jease$.$InCubic,$Opacity:$Jease$.$Linear},$Opacity:2},
+            ];
+
+            var jssor_1_options = {
+              $AutoPlay: 1,
+              $SlideHeight: 380,
+              $SlideshowOptions: {
+                $Class: $JssorSlideshowRunner$,
+                $Transitions: jssor_1_SlideshowTransitions,
+                $TransitionsOrder: 1
+              },
+              $ArrowNavigatorOptions: {
+                $Class: $JssorArrowNavigator$
+              },
+              $ThumbnailNavigatorOptions: {
+                $Class: $JssorThumbnailNavigator$,
+                $SpacingX: 5,
+                $SpacingY: 5
+              }
+            };
+
+            var jssor_1_slider = new $JssorSlider$("jssor_1", jssor_1_options);
+
+            /*#region responsive code begin*/
+
+            var MAX_WIDTH = 370;
+
+            function ScaleSlider() {
+                var containerElement = jssor_1_slider.$Elmt.parentNode;
+                var containerWidth = containerElement.clientWidth;
+
+                if (containerWidth) {
+
+                    var expectedWidth = Math.min(MAX_WIDTH || containerWidth, containerWidth);
+
+                    jssor_1_slider.$ScaleWidth(expectedWidth);
+                }
+                else {
+                    window.setTimeout(ScaleSlider, 30);
+                }
+            }
+
+            ScaleSlider();
+
+            $Jssor$.$AddEvent(window, "load", ScaleSlider);
+            $Jssor$.$AddEvent(window, "resize", ScaleSlider);
+            $Jssor$.$AddEvent(window, "orientationchange", ScaleSlider);
+            /*#endregion responsive code end*/
+        };
+    </script>
+    <script type="text/javascript">jssor_1_slider_init();
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,117 @@
+.product-filters {
+    position: relative;
+    display: flex;
+}
+
+.product-filters {
+    background: #fff 0% 0% no-repeat padding-box;
+    box-shadow: 0 3px 6px #00000029;
+    border-radius: 14px;
+    margin: 20px 0;
+}
+
+.product-filters strong.label {
+    display: inline-block;
+    color: var(--primary-color);
+    padding: 15px 8px;
+}
+
+.product-filters .facet {
+    display: block;
+    padding: 15px 10px;
+    margin-right: 20px;
+}
+
+.product-filters .facet .sub {
+    display: none;
+    position: absolute;
+    width: 100%;
+    z-index: 123;
+    left: 0;
+    top: 40px;
+    padding-top: 10px;
+}
+
+.product-filters .facet label a {
+    color: #000;
+}
+
+.product-filters .facet .sub ul li a {
+    color: #000;
+}
+
+.product-filters .facet .sub ul li a:hover {
+    color: var(--primary-color);
+}
+
+.product-filters .facet .sub ul {
+    background: #fff;
+    box-shadow: 0 3px 6px #00000029;
+    border-radius: 14px;
+    margin: 0;
+    display: grid;
+    grid-template-columns: auto auto auto auto auto;
+    padding: 5px 10px;
+    grid-column-gap: 10px;
+}
+
+.product-filters .facet .sub ul li {
+    list-style: none;
+    padding: 5px;
+}
+
+.product-filters .facet ul li a {
+    display: flex;
+}
+
+.product-filters .facet:hover .sub {
+    display: block
+}
+
+.product-filters .facet:hover label a,
+.product-filters .facet:hover label i,
+.product-filters .facet:hover label span {
+    color: #fd475a
+}
+
+.search-form {
+    position: absolute;
+    top: 99%;
+    left: 0;
+    right: 0;
+    /* border-top: 0.2rem solid var(--gray-color); */
+    background: var(--white-color);
+    height: 6rem;
+    z-index: 888;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    padding: 1.8rem 2rem;
+    -webkit-clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+    clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+}
+
+.search-form.active {
+    -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+    border: 1px solid #eee;
+    border-radius: 10px;
+}
+
+.search-form input {
+    width: 100%;
+    height: 100%;
+    padding-right: 1rem;
+    font-size: 1.7rem;
+    color: #666;
+    text-transform: none;
+}
+
+.search-form label {
+    font-size: 2.5rem;
+    color: var(--gray-color);
+    cursor: pointer;
+}

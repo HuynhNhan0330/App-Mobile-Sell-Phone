@@ -1,0 +1,130 @@
+.body-content h1,
+.body-content .header .icon img {
+    max-width: 100%;
+}
+
+.body-content {
+    width: 100%;
+    max-width: 640px;
+    background: #F4F4F4;
+}
+
+.body-content h2 {
+    font-size: 4rem;
+}
+
+.body-content h1,
+.body-content .header {
+    text-align: center;
+}
+
+.body-content h1,
+.body-content .header .icon img {
+    max-width: 100%;
+}
+
+.account-layout .row {
+    margin-top: 10px;
+}
+
+.account-layout h3 {
+    font-size: 16px;
+    padding-left: 10px;
+}
+
+.account-layout .row .col {
+    flex-basis: 100%;
+    margin-right: 10px;
+}
+
+.account-layout .row .col-lg {
+    flex-grow: 3;
+}
+
+.account-layout .box-bg-white {
+    background: #FFFFFF 0% 0% no-repeat padding-box;
+    box-shadow: 0px 4px 6px #00000029;
+    position: relative;
+    padding: 10px 0;
+}
+
+.account-form {
+    padding: 20px 0;
+}
+
+.form-controls {
+    display: flex;
+    margin-bottom: 15px;
+    padding: 0 10px 0 10px;
+}
+
+.form-controls label {
+    flex-basis: 40%;
+    white-space: nowrap;
+    margin-right: 15px;
+    padding: 8px 0;
+    font-weight: bold;
+    color: #222;
+    min-width: 135px;
+}
+
+.form-controls .controls {
+    display: flex;
+    flex-basis: 100%;
+    flex-grow: 3;
+}
+
+.form-controls .controls input[type=text],
+.form-controls .controls input[type=tel],
+.form-controls .controls input[type=number],
+.form-controls .controls input[type=email],
+.form-controls .controls input[type=password],
+.form-controls .controls textarea,
+.form-controls .controls select {
+    width: 100%;
+    background: #E5E5E5 0% 0% no-repeat padding-box;
+    border-radius: 13px;
+    outline: none;
+    border: none;
+    padding: 8px 20px;
+    font-weight: 600;
+    color: #858585;
+}
+
+.form-controls .submit-controls {
+    display: flex;
+    justify-content: center;
+    justify-items: center;
+}
+
+.form-controls .submit-controls button {
+    background: linear-gradient(to right, #90a9e2, #63abed);
+    box-shadow: 0px 4px 6px #00000029;
+    border-radius: 8px;
+    color: #fff;
+    font-weight: bold;
+    padding: 15px 60px;
+    outline: none;
+    border: none;
+}
+
+.table-lgpading,
+.table-lgpading th,
+.table-lgpading td {
+    padding: 8px 10px;
+}
+
+.table-border,
+.table-border th,
+.table-border td {
+    border: 1px solid #dedede;
+    padding: 5px 8px;
+    font-size: 13px;
+    color: #333;
+}
+
+.table-border th {
+    color: #fff;
+    background: var(--primary-color);
+    text-align: center;
+}

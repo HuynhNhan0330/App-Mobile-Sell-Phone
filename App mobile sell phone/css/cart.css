@@ -1,0 +1,72 @@
+.shopping-cart .price strong {
+    color: red;
+}
+
+.cart-form {
+    background-color: #fff;
+    padding: 15px;
+    border-radius: 10px;
+}
+
+.cart-form h3 {
+    font-size: 3rem;
+    text-align: center;
+    font-weight: 600;
+}
+
+.cart-form .row {
+    margin-bottom: 15px;
+    display: flex;
+    width: auto;
+    justify-content: center;
+    justify-items: stretch;
+    flex-wrap: nowrap;
+}
+
+.cart-form .row .group {
+    font-size: 1.8rem;
+}
+
+.cart-form .row .col {
+    display: flex;
+    justify-items: stretch;
+}
+
+.cart-form .row .control {
+    background: #e5e5e5 0% 0% no-repeat padding-box;
+    border-radius: 13px;
+    border: 1px solid #e5e5e5;
+    display: flex;
+    justify-items: stretch;
+    width: 100%;
+}
+
+.cart-form input, .cart-form textarea, .cart-form select {
+    outline: none;
+    width: 100%;
+    background: none;
+    border: none;
+    font-family: -apple-system,BlinkMacSystemFont,'Segoe UI';
+    font-size: 1.3rem;
+    border-radius: 13px;
+    color: #444;
+    padding: 10px 12px;
+}
+
+.cart-form .row .control-button {
+    text-align: center;
+    background: none;
+}
+
+.cart-form .control-button button {
+    background: linear-gradient(to right,#90a9e2,#63abed);
+    font-weight: bold;
+    border: none;
+    outline: none;
+    box-shadow: 0 4px 6px #00000029;
+    border-radius: 8px;
+    color: #fff;
+    font-size: 1.4rem;
+    text-align: center;
+    padding: 15px 40px;
+}
